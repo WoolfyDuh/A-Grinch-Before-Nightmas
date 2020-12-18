@@ -5,8 +5,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-   float timeRemaining = 10f;
-    bool timerIsRunning = false;
+    public float timeRemaining { get; private set; } = 10f;
+    public bool timerIsRunning { get; private set; } = true;
     TextMeshProUGUI tmp;
 	private void Awake()
 	{
@@ -30,13 +30,12 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining = 0;
                 timerIsRunning = false;
-                Debug.Log("Time is DONE");
             }
         }
     }
 
-    public void AddTime(float timeToBeAdded)
+	public void AddFiveSeconds()
 	{
-        timeRemaining += timeToBeAdded;
+		timeRemaining += 5f;
 	}
 }

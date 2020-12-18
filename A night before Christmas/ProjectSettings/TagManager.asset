@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Present
+  - Timer
+  - Score
   layers:
   - Default
   - TransparentFX
